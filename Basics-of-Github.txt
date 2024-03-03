@@ -1,0 +1,66 @@
+########################################
+##基本操作
+
+1.初期化
+git init
+#リポジトリを新規作成
+
+
+2.記録
+git add .
+#ワークツリー（ローカル）の内容をステージ（事前置き場）に追加
+#"."は全変更ファイル
+#ファイル名で置き換えたら特定ファイルを指定できる
+
+git commit -m "コミットメッセージ"
+#ステージ（事前置き場）の内容をリポジトリに追加
+#コミットメッセージ：変更内容を記載
+
+
+3.状況確認
+git diff
+#リポジトリとワークツリーの差分をチェック
+
+git diff -staged
+#リポジトリとステージの差分をチェック
+
+git status
+#変更ファイルを確認
+
+
+4.履歴確認
+git log
+#リポジトリの変更履歴をチェック
+
+
+5.変更復元
+git restore <ファイル名>
+#ワークツリーの変更を取り消す
+
+git restore -staged <ファイル名>
+#ステージに挙げた変更をワークツリーに戻す
+
+
+
+########################################
+##Githubとの通信
+1.Github登録
+
+2.Git初期設定
+git config -global user.name "Github user name"
+git config -global user.email github@example.com
+
+3.Githubにリポジトリを作成
+
+4.リポジトリを追加
+git remote add origin URL
+#origin:リモート名
+#URL:リモートURL
+
+5.ローカル内容をGithubにプッシュ
+git push origin main
+#origin:リモート名
+#main:ブランチ名
+
+6.リポジトリ内容をローカルにプル
+git pull origin main
