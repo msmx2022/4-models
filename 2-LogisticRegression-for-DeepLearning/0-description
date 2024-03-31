@@ -1,0 +1,9 @@
+#注意：在计算梯度和计算classification rate时所使用的元素是不一样的
+
+
+#在计算梯度（ΔW）时，我们使用的是“probability of y=1”
+#“probability of y=1” = sigmoid（X，W，b）
+
+
+#在计算classification rate的时候，我们需要比较“y”与“prediction of y”
+#prediction of y = np.round（probability of y=1）
